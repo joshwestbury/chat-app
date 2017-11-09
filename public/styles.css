@@ -1,11 +1,14 @@
-body{
-    font-family: 'Nunito';
+html, body{
+    height: 100%;
+    font-family: 'Nunito' !important;
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    background-repeat: no-repeat;
 }
 
 h2{
-    font-size: 18px;
+    font-size: 18px !important;
     padding: 10px 20px;
-    color: #575ed8;
+    color: #20bf9f !important;
 }
 
 #chatter{
@@ -19,7 +22,7 @@ h2{
 #chat-window{
     height: 400px;
     overflow: auto;
-    background: #f9f9f9;
+    background: #dfe4ed;
 }
 
 #output p{
@@ -36,7 +39,7 @@ h2{
 }
 
 #output strong{
-    color: #575ed8;
+    color: #2a5298;
 }
 
 label{
@@ -58,12 +61,28 @@ input{
     font-size: 16px;
 }
 
+.navbar-brand {
+    color: #2a5298 !important;
+    font-weight: bold !important;
+}
+
 button{
-    background: #575ed8;
+    background: #20bf9f;
     color: #fff;
     font-size: 18px;
     border: 0;
     padding: 12px 0;
     width: 100%;
     border-radius: 0 0 2px 2px;
+    margin-bottom: 10px !important;
+}
+
+.nav-color {
+    background-color: #dfe4ed;
+}
+
+@media (max-width: 768px) {
+    .hidden-sm-down {
+        display: none;
+    }
 }
