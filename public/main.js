@@ -1,5 +1,7 @@
 //make connection
 
+//socket.io-client which exposes io global and then connects.
+//no URL is specified when calling io() since it defaults to trying to connect to the host that serves the page
 var socket = io()
 
 
@@ -11,10 +13,11 @@ var message = document.getElementById('message'),
       feedback = document.getElementById('feedback');
 
 
-//emit events
+//emit events (emit pushes to server )
+//when user types message server recieves it as 'chat' message
 btn.addEventListener('click', function(){
     socket.emit('chat', {
-        message: message.value,
+        message: message.value, //.value = value attribute of input element
         handle: handle.value
     });
     message.value = "";
